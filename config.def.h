@@ -153,7 +153,7 @@ static unsigned int defaultrcs = 16;
  * 7: Blinking st cursor
  * 8: Steady st cursor
  */
-static unsigned int cursorstyle = 1;
+static unsigned int cursorstyle = 3;
 static Rune stcursor = 0x2603; /* snowman (U+2603) */
 
 /*
@@ -216,8 +216,9 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
-	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = 15} },
-	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = 15} },
+	{ TERMMOD,              XK_P,           kscrollup,      {.i = 15} },
+	{ TERMMOD,              XK_N,           kscrolldown,    {.i = 15} },
+	{ TERMMOD,              XK_I,           keyboard_select,{.i =  0} },
 	{ TERMMOD,              XK_Return,      newterm,        {.i =  0} },
 };
 
